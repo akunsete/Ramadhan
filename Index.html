@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Ramadhan</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Selamat Datang di Website Ramadhan</h1>
+    </header>
+    
+    <section class="content">
+        <center>
+            <button><a class="BTN" href="ISI1/Index1.html">KLIK!</a></button>
+        </center>
+    </section>
+    
+    <footer>
+        <p>&copy; 2024 Website Ramadhan</p>
+    </footer>
+    <video id="bg-video"autoplay muted loop>
+        <source src="RAMADHAN.mp4" type="video/mp4">
+    </video>
+
+    <audio id="bg-music" autoplay loop>
+        <source src="audio1.mp3" type="audio/mpeg">
+    </audio>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+    var video = document.getElementById('background-video');
+    var sources = video.getElementsByTagName('source');
+    var currentIndex = 0;
+    var nextIndex = 1;
+
+    // Mengganti video setiap 10 detik
+    setInterval(function() {
+        sources[currentIndex].style.display = 'none';
+        sources[nextIndex].style.display = 'block';
+
+        currentIndex = nextIndex;
+        nextIndex = (nextIndex + 0) % sources.length;
+    }, 1); // 10 detik
+});
+
+    </script>
+</body>
+</html>
